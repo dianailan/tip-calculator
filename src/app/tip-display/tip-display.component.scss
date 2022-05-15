@@ -1,0 +1,50 @@
+@import "src/app/shared";
+@import "src/app/palette";
+.display{
+  background-color: $very-dark-cyan;
+  height: 100%;
+  border-radius: 15px;
+  padding: 65px 40px;
+  .display-amount{
+    @include d-flex(row, space-between, flex-start);
+    input{
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: $strong-cyan;
+      font-family: inherit;
+      width: 50%;
+      font-size: 45px;
+      margin-top: -13px;
+      font-weight: 700;
+    }
+    & > div{
+      margin-bottom: 55px;
+    }
+    p{
+      display: flex;
+      flex-direction: column;
+      font-size: 15px;
+      font-weight: 700;
+      color: white;
+      span{
+        color: $dark-gray-cyan;
+        font-size: 13px;
+        margin-top: 10px;
+      }
+    }
+  }
+  button{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: $light-gray-cyan;
+    font-size: 20px;
+    font-family: inherit;
+    font-weight: 700;
+    color: $very-dark-cyan;
+    margin-top: 75px;
+  }
+}

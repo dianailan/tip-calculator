@@ -1,0 +1,15 @@
+<form [formGroup]="values" class="display">
+  <div class="display-amount">
+    <div>
+      <p>Tip Amount <span> / person</span></p>
+    </div>
+    <input formControlName="tipAmount" readonly dir="rtl" value="$0.00">
+  </div>
+  <div class="display-amount">
+    <div>
+      <p>Total <span> / person</span></p>
+    </div>
+    <input formControlName="total" readonly dir="rtl" value="$0.00">
+  </div>
+  <button (click)="reset()">RESET</button>
+</form>

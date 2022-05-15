@@ -1,0 +1,99 @@
+@import "src/app/shared";
+@import "src/app/palette";
+.inputs{
+  @include d-flex(column, flex-start, flex-start);
+  .inp-container{
+    height: 45px;
+    width: 97%;
+    border-radius: 5px;
+    background-color: $light-cyan;
+    border: 2px solid transparent;
+    @include d-flex(row, space-between);
+    padding-left: 10px;
+    &:focus-within{
+      border-color:$strong-cyan;
+    }
+    input{
+      height: 100%;
+      width: 80%;
+      font-size: 24px;
+      margin-right: 10px;
+      color: $very-dark-cyan;
+      font-weight: 700;
+      font-family: inherit;
+      outline: none;
+      background-color: transparent;
+      border: none;
+    }
+  }
+}
+.percents{
+  margin: 40px 0;
+  p{
+    margin-bottom: -5px;
+  }
+  .tip-percent {
+    list-style-type: none;
+    margin: 25px 0 0 0;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 15px;
+    #otherAmount{
+      background-color: $light-cyan;
+      border: none;
+      font-size: 24px;
+      outline: none;
+      font-weight: 700;
+      font-family: inherit;
+      color: $darker-gray-cyan;
+      width: 117px;
+      border-radius: 5px;
+      padding-right: 15px;
+    }
+    li{
+      width: 117px;
+      height: 48px;
+      position: relative;
+    }
+    label, input{
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    input[type="radio"]{
+      opacity: 0.01;
+      z-index: 100;
+      &:checked+label,
+      .Checked+label{
+        background: $light-gray-cyan;
+        color: $very-dark-cyan;
+      }
+    }
+    label{
+      padding: 5px;
+      border: none;
+      background-color: $very-dark-cyan;
+      font-weight: 700;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      @include d-flex(row, center);
+      z-index: 90;
+    }
+  }
+}
+.inp-name{
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: $darker-gray-cyan;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

@@ -1,0 +1,44 @@
+<form [formGroup]="form">
+  <div class="inputs">
+    <p class="inp-name">Bill</p>
+    <div class="inp-container">
+      <img src="assets/icon-dollar.svg" alt="">
+      <input formControlName="bill" type="number" dir="rtl" id="bill">
+    </div>
+  </div>
+  <div class="percents">
+    <p class="inp-name">Select Tip %</p>
+    <ul class="tip-percent">
+      <li>
+        <input formControlName="percent" type="radio" id="a5" value="5" name="percent" />
+        <label for="a5">5%</label>
+      </li>
+      <li>
+        <input formControlName="percent" type="radio" id="a10" value="10" checked="checked" name="percent" />
+        <label for="a10">10%</label>
+      </li>
+      <li>
+        <input formControlName="percent" type="radio" id="a15" value="15" name="percent"/>
+        <label for="a15">15%</label>
+      </li>
+      <li>
+        <input formControlName="percent" type="radio" id="a25" value="25" name="percent"/>
+        <label for="a25">25%</label>
+      </li>
+      <li>
+        <input formControlName="percent" type="radio" id="a50" value="50" name="percent"/>
+        <label for="a50">50%</label>
+      </li>
+      <li>
+        <input formControlName="percent" value="Custom" dir="rtl" type="text" id="otherAmount" name="numAmount" />
+      </li>
+    </ul>
+  </div>
+  <div class="inputs">
+    <p class="inp-name">Number of People</p>
+    <div class="inp-container">
+      <img src="assets/icon-person.svg" alt="">
+      <input type="number" formControlName="people" dir="rtl" id="num-people">
+    </div>
+  </div>
+</form>
